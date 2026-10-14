@@ -1,0 +1,15 @@
+# West Windows – lines to MERGE into the EXISTING WordPress .htaccess (do NOT replace that file).
+# Put them ABOVE the "# BEGIN WordPress" block. Back up .htaccess first.
+
+# 1) Serve the new static homepage first, fall back to WordPress everywhere else
+DirectoryIndex index.html index.php
+
+# 2) Optional: keep old single-topic pages pointing to the matching section of the new homepage.
+#    ONLY add these if you are retiring those WordPress pages. Leave /blog/, /loc/ and /wp-content/ alone.
+# RewriteEngine On
+# RewriteRule ^contact/?$ /#contact [R=301,NE,L]
+# RewriteRule ^gallery/?$ /#gallery [R=301,NE,L]
+# RewriteRule ^testimonials/?$ /#videos [R=301,NE,L]
+# RewriteRule ^door-brochures/?$ /#brochures [R=301,NE,L]
+# RewriteRule ^window-brochures/?$ /#products [R=301,NE,L]
+# RewriteRule ^window-installation/?$ /#products [R=301,NE,L]
